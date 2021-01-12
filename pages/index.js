@@ -9,12 +9,12 @@ const App = ({data}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h2>
-        I'm working on the {data.branch}-branch.
+      <h2 style={{textAlign: 'center'}}>
+        Welcome to the {data.meetup} meetup <br />
+        <small>{data.date}</small>.
       </h2>
 
-      <div>
-        <p>
+        <p style={{maxWidth: 860}}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
 pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
 Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
@@ -27,7 +27,6 @@ Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis.
 Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
 non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.
         </p>
-      </div>
 
       <footer className={styles.footer}>
         <a
@@ -46,7 +45,7 @@ non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.
   // This gets called on every request
 export async function getServerSideProps() {
     // Fetch data from external API
-    const res = await fetch(`${process.env.API_PATH}/api/branch`);
+    const res = await fetch(`${process.env.API_PATH}/api/meetup`);
     const data = await res.json()
 
     // Pass data to the page via props
