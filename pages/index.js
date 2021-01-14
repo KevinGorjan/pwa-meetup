@@ -38,6 +38,9 @@ non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
+
+      <div style={{display:'none'}}>Kevin Gorjan</div>
+
     </div>
   )
 }
