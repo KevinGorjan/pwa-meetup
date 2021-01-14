@@ -1,8 +1,8 @@
 export default (req, res) => {
     res.statusCode = 200
     res.json({
-      date: '14th of January',
-      meetup: '#7'
+      date: '13th of January',
+      meetup: '#6'
     })
   }
   
